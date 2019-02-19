@@ -39,11 +39,6 @@ public class AppConstants {
     Resume.Builder tastebudz = new Resume.Builder(AppConstants.HTTP_TRANSPORT,
         AppConstants.JSON_FACTORY, credential);
 
-//    tastebudz.setRootUrl("http://192.168.1.17:8080/_ah/api/");
-//    tastebudz.setRootUrl("http://192.168.0.100:8080/_ah/api/");
-//    tastebudz.setRootUrl("http://192.168.0.102:8080/_ah/api/");
-    tastebudz.setRootUrl("https://justin-katzwhite-resume.appspot.com/_ah/api/");
-
     return tastebudz.build();
   }
 }

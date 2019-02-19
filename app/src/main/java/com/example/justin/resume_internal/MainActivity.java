@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
     String pl[], bi;
     NavigationView navigationView;
 
+// create activity and load arguments
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -71,6 +72,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
                 .replace(R.id.fragment_container, fragment).commit();
     }
 
+// resets nav drawer when going backwards
     @Override
     public void onBackPressed() {
         navigationView.setCheckedItem(R.id.home);
