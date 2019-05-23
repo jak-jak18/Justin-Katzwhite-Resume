@@ -13,12 +13,12 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
-    compileSdkVersion 23
+    compileSdkVersion 28
     buildToolsVersion '25.0.0'
     defaultConfig {
         applicationId "com.justin.resume"
         minSdkVersion 15
-        targetSdkVersion 23
+        targetSdkVersion 28
         versionCode 6
         versionName "5.1"
     }
@@ -33,8 +33,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.2.1'
-    compile 'com.android.support:design:23.2.1'
+    compile 'com.android.support:appcompat-v7:28.0.0'
+    compile 'com.android.support:design:28.0.0'
     compile('com.google.api-client:google-api-client:1.17.0-rc') {
         exclude(group: 'xpp3', module: 'xpp3')
         exclude(group: 'org.apache.httpcomponents', module: 'httpclient')
@@ -44,4 +44,5 @@ dependencies {
     compile('com.google.api-client:google-api-client-android:1.17.0-rc') {
         exclude(group: 'com.google.android.google-play-services', module: 'google-play-services')
     }
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
 }

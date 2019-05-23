@@ -1,9 +1,18 @@
 <resources>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
+
+    <style name="test" parent="android:Theme.DeviceDefault" >
+        <item name="android:colorPrimary">@color/purple_light</item>
+        <item name="android:colorBackground">@color/purple</item>
+        <item name="android:colorPrimaryDark">@color/purple_dark</item>
+        <item name="android:colorAccent">@color/cyan</item>
+    </style>
+
+    <style name="Test1" parent="android:Theme.Material.Light.DarkActionBar" />
 </resources>

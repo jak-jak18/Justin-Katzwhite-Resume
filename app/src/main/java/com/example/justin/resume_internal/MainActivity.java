@@ -3,6 +3,7 @@ package com.example.justin.resume_internal;
 import android.app.Activity;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -61,6 +62,7 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setCheckedItem(R.id.home);
         navigationView.setNavigationItemSelectedListener(this);
+//        TabLayout tabLayout = findViewById(R.id.tabLayout);
     }
     
     @Override
@@ -118,11 +120,11 @@ public class MainActivity extends AppCompatActivity implements OnNavigationItemS
             fragment = MainFragment.newInstance();
             selection = "Home_selected";
 
-        } else if (id == R.id.background_information) {
+        } else if (id == R.id.skills) {
             fragment = BIFragment.newInstance(args);
             selection = "BI_selected";
 
-        } else if (id == R.id.programming_languages) {
+        } else if (id == R.id.tastebudz) {
             fragment = PLFragment.newInstance(args);
             selection = "PL_selected";
 

@@ -15,11 +15,15 @@
             android:name="com.example.justin.resume_internal.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
+        </activity>
 
+        <activity android:name="._v2.SampleMainActivity"
+            android:theme="@style/grayish_blue__off_white">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 </manifest>

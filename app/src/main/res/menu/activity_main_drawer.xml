@@ -3,20 +3,26 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/home"
-            android:icon="@mipmap/home"
-            android:title="@string/Home" />
+            android:id="@+id/background"
+            android:orderInCategory="0"
+            android:icon="@drawable/person_outline"
+            android:title="@string/background" />
         <item
-            android:id="@+id/background_information"
-            android:icon="@android:drawable/ic_menu_compass"
-            android:title="@string/BI" />
+            android:id="@+id/skills"
+            android:orderInCategory="1"
+            android:icon="@drawable/code"
+            android:title="@string/skills" />
         <item
-            android:id="@+id/programming_languages"
-            android:icon="@mipmap/ic_launcher"
-            android:title="@string/PL" />
+            android:id="@+id/tastebudz"
+            android:orderInCategory="2"
+            android:icon="@drawable/restaurant"
+            android:title="@string/tastebudz" />
         <item
             android:id="@+id/contact"
-            android:icon="@android:drawable/ic_dialog_email"
+            android:orderInCategory="3"
+            android:icon="@drawable/mail_outline"
             android:title="@string/C" />
     </group>
+    <!--android:icon="@android:drawable/ic_dialog_email"-->
 </menu>
+

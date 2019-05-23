@@ -8,7 +8,7 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
@@ -16,4 +16,26 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="test" parent="android:Theme.DeviceDefault">
+        <item name="android:colorBackground">@color/purple</item>
+    </style>
+
+    <style name="Test2" parent="Theme.AppCompat">
+        <item name="colorPrimary">@color/purple_light</item>
+        <item name="colorPrimaryDark">@color/purple_dark</item>
+        <item name="colorAccent">@color/cyan</item>
+        <item name="android:colorBackground">@color/purple</item>
+        <item name="android:textColorPrimary">@color/cyan</item>
+    </style>
+
+    <style name="grayish_blue__off_white" parent="Theme.AppCompat" >
+        <item name="colorPrimary">@color/grayish_blue_light</item>
+        <item name="colorPrimaryDark">@color/grayish_blue_dark</item>
+        <item name="colorAccent">@color/off_white</item>
+        <item name="android:colorBackground">@color/grayish_blue</item>
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+    </style>
+
+
 </resources>

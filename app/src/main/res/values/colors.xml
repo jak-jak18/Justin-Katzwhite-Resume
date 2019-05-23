@@ -11,4 +11,18 @@
     <color name="html5">#f16529</color>
 
     <color name="itemlist">#00bcd4</color>
+
+    <!--Schema 1-->
+    <color name="purple">#311b92</color>
+    <color name="purple_light">#6746c3</color>
+    <color name="purple_dark">#000063</color>
+    <color name="cyan">#4dd0e1</color>
+    <color name="accent_device_default_dark">#4dd0e1</color>
+
+    <!--Schema 2-->
+    <color name="grayish_blue">#bbdefb</color>
+    <color name="off_white">#eeeeee</color>
+    <color name="grayish_blue_light">#eeffff</color>
+    <color name="grayish_blue_dark">#8aacc8</color>
+    <color name="text_color_primary">@android:color/black</color>
 </resources>
