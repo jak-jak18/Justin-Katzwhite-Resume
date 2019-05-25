@@ -22,7 +22,6 @@ class ContactFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        var textView = view.findViewById<TextView>(R.id.textView)
         textView.text = resources.getString(R.string.contact);
     }
 

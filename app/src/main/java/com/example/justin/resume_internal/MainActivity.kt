@@ -2,10 +2,7 @@ package com.example.justin.resume_internal
 
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
-import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {

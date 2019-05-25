@@ -1,5 +1,6 @@
 package com.example.justin.resume_internal
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -22,7 +23,13 @@ class BackgroundFrag : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        textView.text = resources.getString(R.string.background)
+
+        textView.text = resources.getString(R.string.background_information)
+        textView.typeface = Typeface.createFromAsset(activity?.assets,
+            "font/EB_Garamond/EBGaramond-Regular.ttf")
+        textView.setTextColor(resources.getColor(android.R.color.black))
+
+
     }
 
     override fun onCreateAnimation(transit: Int, enter: Boolean, nextAnim: Int): Animation {

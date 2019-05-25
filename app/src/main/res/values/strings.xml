@@ -33,8 +33,18 @@
         You can then retrieve current entries by pressing the view associated with the language.
     </string>
 
-    <string name="contact">If you would like to contact me, please send an e-mail to the e-mail
+    <string name="contact">
+        \nIf you would like to contact me, please send an e-mail to the e-mail
         address provided below. I should respond within 48 hours. Thank you.</string>
+
+    <string-array name="skill_titles">
+        <item>Android</item>
+        <item>Cloud</item>
+        <item>Firebase</item>
+        <item>IDE</item>
+        <item>OS</item>
+        <item>Github</item>
+    </string-array>
 
     <string-array name="programming_languages">
         <item>
@@ -67,7 +77,7 @@
     </string-array>
 
     <string name="background_information">
-        \n\nI\'ve been developing mobile apps since 2015.
+        \nI\'ve been developing mobile apps since 2015.
         I spent a year learning and programming in multiple programming languages such as Java and Python.
         Now I\'m able to utilize technology essential to many different applications. I have two applications found
         on the Google Play Store.
