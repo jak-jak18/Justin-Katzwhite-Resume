@@ -76,6 +76,105 @@
             \n\nBy interacting, data could be submitted to the cloud database and retrieved as well.</item>
     </string-array>
 
+    <string name="java_text">
+        I started learning and programming in Java in the end of 2014. In early 2015 I started developing Android apps
+        in Java. I’ve developed a strong understanding of the Android framework including activities, fragments,
+        layouts and views. As well as more advanced features such as adapters, client libraries designed to communicate
+        with backend APIs, SQLite databases and navigation drawers. Because of my work on Tastebudz, I’ve developed a
+        very strong understanding of the nfc adapter found in Android powered smartphones.
+
+        In keeping up the latest technology, I’ve worked software included in Android Jetpack such as ViewModel,
+        RecylcerView, LiveData and Room.
+
+        Some of the apps I've developed use Google Play Services such as Google Maps.
+
+        I test many of the Android apps I develop using jUnit and Espresso.
+    </string>
+
+    <string name="kotlin_text">
+        I started developing Android apps in Kotlin in the beginning of 2019. Learning the change in syntax and
+        structure required some patience but now I’ve come to appreciate the simplicity that Kotlin was intended to
+        provide. I’m still learning the intricacies of Kotlin but I’m getting better every day. In fact, this entire
+        app is written in Kotlin.
+    </string>
+
+    <string name="python_text">
+        I started programming in Python in the middle of 2015. Eager to learn about cloud computing and how a mobile
+        app interacted with a cloud backend, I started working on example projects on Google Cloud Platform (GCP).
+        Recently, I’ve migrated from Python 2 to Python 3.
+
+        I leverage many of Python’s features. I use pip for downloading packages. I have a very strong understanding
+        of data models such as dictionaries. I leverage many of Python’s built-in functions and can implement newer
+        technology such as lambda functions.
+
+        I practice good testing habits and test many of my Python scripts using PyTest.
+    </string>
+
+    <string name="gcp_text">
+        I’ve been developing Python apps hosted on GCP since 2015. Starting with Cloud SDK, I’ve have used many programs
+        that come with the package such as dev_server, endpointscfg, appcfg. Before uploading my app to App Engine, I
+        would test it using dev_server. This is how quickly learned many APIs.
+
+        I’ve worked with Datastore, Google’s NoSql database; Memcache, for storing tokens; creating my own endpoints,
+        the Requests API and Stackdriver.
+
+        Recently I’ve learned about concurrency by using Python’s asyncio. I’ve also learned about kubernetes, compute
+        engine, cloud functions, big query and big table.
+    </string>
+
+    <string name="aws_text">
+        I have some experience with AWS. While I’m not as familiar with it as GCP, I’m learning more about the features
+        it has to offer.
+    </string>
+
+    <string name="firebase_text">
+        I started working with Firebase in the middle of 2017. Looking to add messaging and profiles to Tastebudz, I
+        started learning about the features Firebase had to offer. I linked my GCP project to Firebase and activated
+        the messaging capability. I created a new endpoint in my backend for messaging and added the feature to
+        Tastebudz.
+
+        For the profiles, I created a new activity in the Tastebudz app and added an endpoint in my backend for
+        registering profiles.
+
+        I would later add a menu building activity in Tastebudz. To store the menu item images, I used Firebase
+        storage, which linked with my project's cloud storage, and populated it with the images uploaded.
+
+        To catch any errors that might occur while people were running Tastebudz, I included Firebase’s Crashlytics.
+        Crashlytics catches errors and crashes and then sends an email to the project owners informing them about
+        what happened. Crashlytics is a very useful tool for ensuring flawless performance.
+    </string>
+
+    <string name="studio_text">
+        I\'ve been working with Android Studio since it came out in beta. Today, I have an excellent understanding of
+        the IDE and leverage several features during development. I use Android Studio’s VCS capability to push daily
+        improvements to the source code I work on. I use Gradle to synchronize the additional libraries and dependencies
+        that each app uses. I test the apps I develop on smartphones as well as Android Studio’s emulator. I’m able to
+        leverage Android Studio’s refactoring capability to quickly make changes across the source code. I use Logcat to
+        track the events that occur while the app is running and Profiler to view how efficiently the app is running.
+    </string>
+
+    <string name="pycharm_text">
+        I\'ve been using PyCharm since the middle of 2015. I use PyCharm to create python apps that are uploaded to GCP.
+        After creating a virtual environment, I use pip to download GCP packages, write the code using these packages
+        and test the scripts using dev_server provided by Cloud SDK
+    </string>
+
+    <string name="windows7_text">
+        Before 2019, Windows was the only OS I had worked with. I had become very familiar with both command line and
+        PowerShell. I also have technical experience with Microsoft Excel.
+    </string>
+
+    <string name="mint_text">
+        Since the beginning of 2019 I\'ve been developing in a Linux environment. With Linux Mint as my distro,
+        I\'ve picked up the terminal commands and have come to embrace the open source community.
+    </string>
+
+    <string name="github_text">
+        I use git for my VCS and GitHub as my remote repository. I\'m capable of using git in both the command terminal
+        and IDE. I have a GitHub account showcasing some of the work I've done. If you're interested, check out
+        https://github.com/jak-jak18.
+    </string>
+
     <string name="background_information">
         \nI\'ve been developing mobile apps since 2015.
         I spent a year learning and programming in multiple programming languages such as Java and Python.

@@ -39,7 +39,7 @@ class SkillsFrag : Fragment() {
     internal inner class CoursePagerAdapter(fm: FragmentManager, var context: Context) : FragmentPagerAdapter(fm) {
 
         override fun getItem(i: Int): Fragment {
-            return Section.newInstance(skill_titles!![i])
+            return Skill.newInstance(skill_titles!![i])
         }
 
         override fun getCount(): Int {
@@ -53,9 +53,21 @@ class SkillsFrag : Fragment() {
     }
 
 
-    class Section : Fragment() {
+    class Skill : Fragment() {
 
-        val SECTION = "SECTION"
+        val SKILL = "SKILL"
+
+        companion object {
+            val SKILL = "SKILL"
+
+            fun newInstance(section: String): Skill {
+                val fragment = Skill()
+                val args = Bundle()
+                args.putString(SKILL, section)
+                fragment.arguments = args
+                return fragment
+            }
+        }
 
         override fun onCreateView(
             inflater: LayoutInflater, container: ViewGroup?,
@@ -65,23 +77,9 @@ class SkillsFrag : Fragment() {
         }
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
             val textView = view.findViewById<TextView>(R.id.holderView)
-            textView.setText(arguments!!.getString(SECTION))
+            textView.setText(arguments!!.getString(SKILL))
             textView.typeface = Typeface.createFromAsset(context!!.assets, "font/EB_Garamond/EBGaramond-Regular.ttf")
-        }
-
-        companion object {
-
-            val SECTION = "SECTION"
-
-            fun newInstance(section: String): Section {
-                val fragment = Section()
-                val args = Bundle()
-                args.putString(SECTION, section)
-                fragment.arguments = args
-                return fragment
-            }
         }
     }
 
