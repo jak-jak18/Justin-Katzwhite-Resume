@@ -10,6 +10,8 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
@@ -21,19 +23,16 @@ class SkillsFrag : Fragment() {
     val LOG_TAG = this.javaClass.simpleName
     val skill_titles: ArrayList<String> = ArrayList()
 
-    init {
-        images["Android"] = intArrayOf(R.mipmap.java, R.mipmap.kotlin)
-        images["Cloud"] = intArrayOf(R.mipmap.python, R.mipmap.gcp, R.mipmap.aws)
-        images["Firebase"] = intArrayOf(R.mipmap.firebase)
-        images["IDE"] = intArrayOf(R.mipmap.studio, R.mipmap.pycharm)
-        images["OS"] = intArrayOf(R.mipmap.windows, R.mipmap.mint)
-        images["Github"] = intArrayOf(R.mipmap.github)
-    }
-
     companion object{
         fun newInstance() = SkillsFrag()
-        val images : HashMap<String, IntArray> = HashMap()
         val text : HashMap<String, Array<String>> = HashMap()
+        val images = mapOf<String, IntArray>(
+            "Android" to intArrayOf(R.mipmap.java, R.mipmap.kotlin),
+            "Cloud" to intArrayOf(R.mipmap.python, R.mipmap.gcp, R.mipmap.aws),
+            "Firebase" to intArrayOf(R.mipmap.firebase),
+            "IDE" to intArrayOf(R.mipmap.studio, R.mipmap.pycharm),
+            "OS" to intArrayOf(R.mipmap.windows, R.mipmap.mint),
+            "Github" to intArrayOf(R.mipmap.github))
     }
 
     override fun onAttach(context: Context?) {
@@ -58,6 +57,10 @@ class SkillsFrag : Fragment() {
         pager.adapter = CoursePagerAdapter(childFragmentManager, context!!)
         pager.currentItem = 0
         tabLayout.setupWithViewPager(pager)
+    }
+
+    override fun onCreateAnimation(transit: Int, enter: Boolean, nextAnim: Int): Animation {
+        return AnimationUtils.loadAnimation(activity, if (enter) android.R.anim.fade_in else android.R.anim.fade_out)
     }
 
     internal inner class CoursePagerAdapter(fm: FragmentManager, var context: Context) : FragmentPagerAdapter(fm) {

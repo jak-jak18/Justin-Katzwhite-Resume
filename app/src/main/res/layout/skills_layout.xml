@@ -8,7 +8,8 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:tabMode="scrollable"/>
+            app:layout_constraintStart_toStartOf="parent" app:tabMode="scrollable"
+            app:tabTextColor="@color/text_color_primary" app:tabSelectedTextColor="@color/grayish_blue_light"/>
 
     <android.support.v4.view.ViewPager
             android:id="@+id/pager"
@@ -18,18 +19,4 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:paddingLeft="16dp" android:paddingRight="16dp"/>
-    <!--<TextView-->
-    <!--android:id="@+id/textView"-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="0dp"-->
-    <!--android:layout_marginLeft="16dp"-->
-    <!--android:layout_marginRight="16dp"-->
-    <!--android:padding="8dp"-->
-    <!--android:textSize="18sp"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toStartOf="parent"-->
-    <!--app:layout_constraintTop_toBottomOf="@id/tabLayout" />-->
-
-
 </android.support.constraint.ConstraintLayout>
