@@ -52,7 +52,6 @@ class SkillsFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        textView.setText("Skill Frag")
         skill_titles.addAll(resources.getStringArray(R.array.skill_titles))
         pager.adapter = CoursePagerAdapter(childFragmentManager, context!!)
         pager.currentItem = 0
@@ -74,7 +73,6 @@ class SkillsFrag : Fragment() {
         }
 
         override fun getPageTitle(position: Int): CharSequence? {
-//            Log.d(LOG_TAG, skill_titles[position])
             return skill_titles[position]
         }
     }
@@ -100,34 +98,18 @@ class SkillsFrag : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
-//            val images : ArrayList<Int> = ArrayList()
-//            images.add(R.mipmap.java1)
-//            images.add(R.mipmap.kotlin)
-//
-//            val text : ArrayList<String> = ArrayList()
-//            text.add(resources.getString(R.string.java_text))
-//            text.add(resources.getString(R.string.kotlin_text))
             Log.d(LOG_TAG, SKILL)
             val view = inflater.inflate(R.layout.skills_list, container, false)
             val list = view.findViewById<ListView>(R.id.skills_list)
-            list.adapter = SkillAdapter(SkillsFrag.text[arguments!![SKILL]],
-                SkillsFrag.images[arguments!![SKILL]],
+            list.adapter = SkillAdapter(text[arguments!![SKILL]], images[arguments!![SKILL]],
                 inflater)
             return view
-        }
-
-        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-
-//            val textView = view.findViewById<TextView>(R.id.holderView)
-//            textView.setText(arguments!!.getString(SKILL))
-//            textView.typeface = Typeface.createFromAsset(context!!.assets, "font/EB_Garamond/EBGaramond-Regular.ttf")
         }
     }
 
     class SkillAdapter(val text: Array<String>?, val images: IntArray?,
                        val inflater: LayoutInflater) : BaseAdapter(){
         val LOG_TAG = this.javaClass.simpleName
-//        val test_arry : Array<Int> = Array(2) {3;2}
 
         override fun getCount(): Int { return text!!.size }
 
