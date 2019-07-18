@@ -55,20 +55,11 @@ class TastebudzFrag : Fragment() {
         }
 
         override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-            if(position == 0){
-                val view = inflater.inflate(R.layout.initial_card, parent, false)
-                view.findViewById<ImageView>(R.id.imageView)
-                    .setImageResource(getItem(position).first)
-                val textView = view.findViewById<TextView>(R.id.textView)
-                textView.text = context?.resources?.getString(getItem(position).second)
-                textView.typeface = Typeface.createFromAsset(
-                    context?.assets,
-                    "font/EB_Garamond/EBGaramond-Regular.ttf"
-                )
-                return view
+            val view : View = if(position == 0){
+                inflater.inflate(R.layout.initial_card, parent, false)
+            }else{
+                inflater.inflate(R.layout.card, parent, false)
             }
-
-            val view = inflater.inflate(R.layout.card, parent, false)
             view.findViewById<ImageView>(R.id.imageView)
                 .setImageResource(getItem(position).first)
             val textView = view.findViewById<TextView>(R.id.textView)

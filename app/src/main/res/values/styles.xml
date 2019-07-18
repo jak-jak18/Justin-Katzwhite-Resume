@@ -9,4 +9,9 @@
         <item name="android:textColorPrimary">@color/text_color_primary</item>
     </style>
 
+    <!--Launcher theme-->
+    <style name="AppTheme.Launcher">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
+
 </resources>
