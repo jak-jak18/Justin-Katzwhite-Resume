@@ -1,17 +1,8 @@
 <resources>
     <string name="app_name">Resumé</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="title">Justin Katzwhite\'s Resumé</string>
     <string name="email">jkatzwhitew@gmail.com</string>
-
-    <string name="retrieve">Retrieve data from cloud </string>
-    <string name="clear">Clear SQLite Database</string>
 
     <string name="home">Home</string>
     <string name="BI">Background Information</string>
@@ -22,21 +13,32 @@
     <string name="S">SQL</string>
     <string name="tastebudz">Tastebudz</string>
 
-    <string name="PL_textview">
-        This view is scrollable.
 
-        \n\nPress a view to insert app data into SQLite database. Long press a view to
-        retrieve data from cloud database and insert into SQLite database. Either way you will be able to
-        learn about my experience with its associated language(s).
+    <!--Background Text-->
+    <string name="background_information">
+        I\'ve been developing mobile apps since 2015.
+        I spent a year learning and programming in multiple programming languages such as Java and Python.
+        Now I\'m able to utilize technology essential to many different applications. I have two applications found
+        on the Google Play Store.
 
-        \n\nTo delete database entries, select settings on the top right and select "Clear SQLite Database."
-        You can then retrieve current entries by pressing the view associated with the language.
+        Tastebudz is an app I developed that is intended for the restaurant industry. By using the nfc adapter on
+        customer\'s phone, customers can quickly scan an nfc tag and be paired with the restaurant\'s menu. This allows
+        for digital ordering and many more features.
+
+        In 2006 I enrolled in the University of Pittsburgh School of
+        Engineering and in 2010 I received a B.S. in Electrical Engineering with a minor in
+        mathematics. From my pursuit of a B.S., I\'ve learned to work effectively in a team setting.
+
+        \n\nDuring my stay, I contributed to research studying Power Quality (PQ) events in power
+        lines and power outlets.
+
+        \n\nAfterwards, I worked for over 4 years at the United States Patent and Trademark Office.
+        My daily activities included reviewing and prosecuting applications and arguing against and
+        negotiating with patent attorneys. I worked at the GS-11 level.
     </string>
 
-    <string name="contact">
-        \nIf you would like to contact me, please send an e-mail to the e-mail
-        address provided below. I should respond within 48 hours. Thank you.</string>
 
+    <!--Skill Titles-->
     <string-array name="skill_titles">
         <item>Android</item>
         <item>Cloud</item>
@@ -46,36 +48,8 @@
         <item>Github</item>
     </string-array>
 
-    <string-array name="programming_languages">
-        <item>
-            I’ve been programming in Java and developing Android applications for over three
-            years.
 
-            \n\nI’ve developed android apps that use activities, fragments, layouts,
-            adapters, classes, client libraries designed to communicate with backend APIs,
-            LRUcache, SQLite and navigation drawers. These apps have used the camera and nfc
-            adapter in smartphones. I\'ve also used Firebase services such as crashlytics,
-            authentication and uploading images.</item>
-
-        <item>
-            I’ve designed backend APIs in Python that communicate with frontend client applications
-            using JSON. I\'m familiar with OAuth2.0.</item>
-
-        <item>
-            I’ve designed cloud applications in Python supported by Google App Engine (GAE). These
-            applications use the webapp2 framework and the Jinja template.
-
-            \n\nI’ve also created NoSQL databases that supply data to the web application and the
-            backend API. I’ve used cloud applications to transmit various data including text, image
-            urls and prices.</item>
-
-        <item>
-            I’ve created web applications using HTML5, JavaScript and CSS and have had these
-            applications interact with the cloud applications I’ve created.
-
-            \n\nBy interacting, data could be submitted to the cloud database and retrieved as well.</item>
-    </string-array>
-
+    <!--Skill Text-->
     <string-array name="Android">
         <item>
             I started learning and programming in Java in the end of 2014. In early 2015 I started developing Android apps
@@ -178,129 +152,44 @@
         <item>
             I use git for my VCS and GitHub as my remote repository. I\'m capable of using git in both the command terminal
             and IDE. I have a GitHub account showcasing some of the work I\'ve done. If you\'re interested, check out
-            https://github.com/jak-jak18.
+            https://github.com/jak-jak18
         </item>
     </string-array>
 
-    <string name="java_text">
-        I started learning and programming in Java in the end of 2014. In early 2015 I started developing Android apps
-        in Java. I’ve developed a strong understanding of the Android framework including activities, fragments,
-        layouts and views. As well as more advanced features such as adapters, client libraries designed to communicate
-        with backend APIs, SQLite databases and navigation drawers. Because of my work on Tastebudz, I’ve developed a
-        very strong understanding of the nfc adapter found in Android powered smartphones.
 
-        \n\nIn keeping up with the latest technology, I’ve worked with software included in Android Jetpack such as ViewModel,
-        RecylcerView, LiveData and Room.
-
-        \n\nSome of the apps I\'ve developed use Google Play Services such as Google Maps.
-
-        \n\nI test many of the Android apps I develop using jUnit and Espresso.
+    <!--Tastebudz Text-->
+    <string name="tastebudz_intro">
+        Tastebudz uses the NFC adapter on a customer’s phone to free restaurants from having to buy expensive tablets
+        or specialized hardware.
+        \nhttps://play.google.com/store/apps/details?id=com.my.tastebudz
+    </string>
+    <string name="tastebudz_background">
+        By using an NFC (near-field communication) tag the restaurant name, table number
+        and seat number can be immediately paired to a customer’s phone.
+    </string>
+    <string name="tastebudz_course">
+        When a customer scans a tag with a phone running Tastebudz, the phone will immediately download the
+        restaurant’s menu, if it isn’t stored already, and allow the customer to order whatever is available.
+    </string>
+    <string name="tastebudz_item">
+        Besides being a vastly more cost efficient solution, Tastebudz allows restaurants to customize their menu with
+        greater detail and can take into account user preferences such as food allergies.
+    </string>
+    <string name="tastebudz_order">
+        The customer can view an image of the item, a description, a list of ingredients, a calorie amount and price.
+        As you order, Tastebudz keeps track of the items as well as total price and calories.
+    </string>
+    <string name="tastebudz_waiter">
+        Tastebudz is intended to be an expansive, cloud-based POS system where multiple, non-specialized devices work in
+        tandem so that orders can be placed from a customer’s phones, sent to the kitchen and waiters can serve as
+        soon as the food is available.
     </string>
 
-    <string name="kotlin_text">
-        I started developing Android apps in Kotlin in the beginning of 2019. Learning the change in syntax and
-        structure required some patience but now I’ve come to appreciate the simplicity that Kotlin was intended to
-        provide. I’m still learning the intricacies of Kotlin but I’m getting better every day. In fact, this entire
-        app is written in Kotlin.
-    </string>
 
-    <string name="python_text">
-        I started programming in Python in the middle of 2015. Eager to learn about cloud computing and how a mobile
-        app interacted with a cloud backend, I started working on example projects on Google Cloud Platform (GCP).
-        Recently, I’ve migrated from Python 2 to Python 3.
-
-        I leverage many of Python’s features. I use pip for downloading packages. I have a very strong understanding
-        of data models such as dictionaries. I leverage many of Python’s built-in functions and can implement newer
-        technology such as lambda functions.
-
-        I practice good testing habits and test many of my Python scripts using PyTest.
-    </string>
-
-    <string name="gcp_text">
-        I’ve been developing Python apps hosted on GCP since 2015. Starting with Cloud SDK, I’ve have used many programs
-        that come with the package such as dev_server, endpointscfg, appcfg. Before uploading my app to App Engine, I
-        would test it using dev_server. This is how quickly learned many APIs.
-
-        I’ve worked with Datastore, Google’s NoSql database; Memcache, for storing tokens; creating my own endpoints,
-        the Requests API and Stackdriver.
-
-        Recently I’ve learned about concurrency by using Python’s asyncio. I’ve also learned about kubernetes, compute
-        engine, cloud functions, big query and big table.
-    </string>
-
-    <string name="aws_text">
-        I have some experience with AWS. While I’m not as familiar with it as GCP, I’m learning more about the features
-        it has to offer.
-    </string>
-
-    <string name="firebase_text">
-        I started working with Firebase in the middle of 2017. Looking to add messaging and profiles to Tastebudz, I
-        started learning about the features Firebase had to offer. I linked my GCP project to Firebase and activated
-        the messaging capability. I created a new endpoint in my backend for messaging and added the feature to
-        Tastebudz.
-
-        For the profiles, I created a new activity in the Tastebudz app and added an endpoint in my backend for
-        registering profiles.
-
-        I would later add a menu building activity in Tastebudz. To store the menu item images, I used Firebase
-        storage, which linked with my project\'s cloud storage, and populated it with the images uploaded.
-
-        To catch any errors that might occur while people were running Tastebudz, I included Firebase’s Crashlytics.
-        Crashlytics catches errors and crashes and then sends an email to the project owners informing them about
-        what happened. Crashlytics is a very useful tool for ensuring flawless performance.
-    </string>
-
-    <string name="studio_text">
-        I\'ve been working with Android Studio since it came out in beta. Today, I have an excellent understanding of
-        the IDE and leverage several features during development. I use Android Studio’s VCS capability to push daily
-        improvements to the source code I work on. I use Gradle to synchronize the additional libraries and dependencies
-        that each app uses. I test the apps I develop on smartphones as well as Android Studio’s emulator. I’m able to
-        leverage Android Studio’s refactoring capability to quickly make changes across the source code. I use Logcat to
-        track the events that occur while the app is running and Profiler to view how efficiently the app is running.
-    </string>
-
-    <string name="pycharm_text">
-        I\'ve been using PyCharm since the middle of 2015. I use PyCharm to create python apps that are uploaded to GCP.
-        After creating a virtual environment, I use pip to download GCP packages, write the code using these packages
-        and test the scripts using dev_server provided by Cloud SDK.
-    </string>
-
-    <string name="windows7_text">
-        Before 2019, Windows was the only OS I had worked with. I had become very familiar with both command line and
-        PowerShell. I also have technical experience with Microsoft Excel.
-    </string>
-
-    <string name="mint_text">
-        Since the beginning of 2019 I\'ve been developing in a Linux environment. With Linux Mint as my distro,
-        I\'ve picked up the terminal commands and have come to embrace the open source community.
-    </string>
-
-    <string name="github_text">
-        I use git for my VCS and GitHub as my remote repository. I\'m capable of using git in both the command terminal
-        and IDE. I have a GitHub account showcasing some of the work I\'ve done. If you\'re interested, check out
-        https://github.com/jak-jak18.
-    </string>
-
-    <string name="background_information">
-        I\'ve been developing mobile apps since 2015.
-        I spent a year learning and programming in multiple programming languages such as Java and Python.
-        Now I\'m able to utilize technology essential to many different applications. I have two applications found
-        on the Google Play Store.
-
-        Tastebudz is an app I developed that is intended for the restaurant industry. By using the nfc adapter on
-        customer\'s phone, customers can quickly scan an nfc tag and be paired with the restaurant\'s menu. This allows
-        for digital ordering and many more features.
-
-        In 2006 I enrolled in the University of Pittsburgh School of
-        Engineering and in 2010 I received a B.S. in Electrical Engineering with a minor in
-        mathematics. From my pursuit of a B.S., I\'ve learned to work effectively in a team setting.
-
-        \n\nDuring my stay, I contributed to research studying Power Quality (PQ) events in power
-        lines and power outlets.
-
-        \n\nAfterwards, I worked for over 4 years at the United States Patent and Trademark Office.
-        My daily activities included reviewing and prosecuting applications and arguing against and
-        negotiating with patent attorneys. I worked at the GS-11 level.
-
+    <!--Contact Text-->
+    <string name="contact">
+        \nIf you would like to contact me, please send an e-mail to the e-mail
+        address provided below. I should respond within 48 hours. Thank you.
+        \n\nE-mail: jkatzwhitew@gmail.com
     </string>
 </resources>

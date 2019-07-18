@@ -1,5 +1,6 @@
 package com.example.justin.resume_internal
 
+import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -23,6 +24,10 @@ class ContactFrag : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         textView.text = resources.getString(R.string.contact);
+        textView.typeface = Typeface.createFromAsset(
+            context?.assets,
+            "font/EB_Garamond/EBGaramond-Regular.ttf"
+        )
     }
 
     override fun onCreateAnimation(transit: Int, enter: Boolean, nextAnim: Int): Animation {

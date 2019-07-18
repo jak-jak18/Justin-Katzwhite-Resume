@@ -19,7 +19,9 @@
         <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent" android:layout_height="wrap_content"
-                android:textColor="@color/text_color_primary" android:textSize="16sp"/>
+                android:textColor="@color/text_color_primary" android:textSize="16sp"
+                android:paddingRight="10dp" android:autoLink="web"
+                android:textColorLink="#1E88E5"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

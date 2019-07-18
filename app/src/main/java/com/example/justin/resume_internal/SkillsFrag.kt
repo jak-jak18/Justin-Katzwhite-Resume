@@ -26,7 +26,7 @@ class SkillsFrag : Fragment() {
     companion object{
         fun newInstance() = SkillsFrag()
         val text : HashMap<String, Array<String>> = HashMap()
-        val images = mapOf<String, IntArray>(
+        val images = mapOf(
             "Android" to intArrayOf(R.mipmap.java, R.mipmap.kotlin),
             "Cloud" to intArrayOf(R.mipmap.python, R.mipmap.gcp, R.mipmap.aws),
             "Firebase" to intArrayOf(R.mipmap.firebase),
@@ -62,7 +62,7 @@ class SkillsFrag : Fragment() {
         return AnimationUtils.loadAnimation(activity, if (enter) android.R.anim.fade_in else android.R.anim.fade_out)
     }
 
-    internal inner class CoursePagerAdapter(fm: FragmentManager, var context: Context) : FragmentPagerAdapter(fm) {
+    inner class CoursePagerAdapter(fm: FragmentManager, var context: Context) : FragmentPagerAdapter(fm) {
 
         override fun getItem(i: Int): Fragment {
             return Skill.newInstance(skill_titles[i])
@@ -76,7 +76,6 @@ class SkillsFrag : Fragment() {
             return skill_titles[position]
         }
     }
-
 
     class Skill : Fragment() {
         val LOG_TAG = this.javaClass.simpleName
