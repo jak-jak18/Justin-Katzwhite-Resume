@@ -52,11 +52,11 @@
     <!--Skill Text-->
     <string-array name="Android">
         <item>
-            I started learning and programming in Java in the end of 2014. In early 2015 I started developing Android apps
+            I started learning and programming in Java at the end of 2014. In early 2015 I started developing Android apps
             in Java. I’ve developed a strong understanding of the Android framework including activities, fragments,
             layouts and views. As well as more advanced features such as adapters, client libraries designed to communicate
             with backend APIs, SQLite databases and navigation drawers. Because of my work on Tastebudz, I’ve developed a
-            very strong understanding of the nfc adapter found in Android powered smartphones.
+            very strong understanding of the NFC adapter found in Android powered smartphones.
 
             \n\nIn keeping up with the latest technology, I’ve worked with software included in Android Jetpack such as ViewModel,
             RecylcerView, LiveData and Room.

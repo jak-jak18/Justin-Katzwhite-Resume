@@ -21,28 +21,25 @@ import kotlinx.android.synthetic.main.skills_layout.*
 class SkillsFrag : Fragment() {
 
     val LOG_TAG = this.javaClass.simpleName
-    val skill_titles: ArrayList<String> = ArrayList()
 
     companion object{
         fun newInstance() = SkillsFrag()
-        val text : HashMap<String, Array<String>> = HashMap()
+        val text = mapOf(
+            "Android" to R.array.Android,
+            "Cloud" to R.array.Cloud,
+            "Firebase" to R.array.Firebase,
+            "IDE" to R.array.IDE,
+            "OS" to R.array.OS,
+            "Github" to R.array.Github
+        )
         val images = mapOf(
             "Android" to intArrayOf(R.mipmap.java, R.mipmap.kotlin),
             "Cloud" to intArrayOf(R.mipmap.python, R.mipmap.gcp, R.mipmap.aws),
             "Firebase" to intArrayOf(R.mipmap.firebase),
             "IDE" to intArrayOf(R.mipmap.studio, R.mipmap.pycharm),
             "OS" to intArrayOf(R.mipmap.windows, R.mipmap.mint),
-            "Github" to intArrayOf(R.mipmap.github))
-    }
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-        text["Android"] = context!!.resources.getStringArray(R.array.Android)
-        text["Cloud"] = context.resources.getStringArray(R.array.Cloud)
-        text["Firebase"] = context.resources.getStringArray(R.array.Firebase)
-        text["IDE"] = context.resources.getStringArray(R.array.IDE)
-        text["OS"] = context.resources.getStringArray(R.array.OS)
-        text["Github"] = context.resources.getStringArray(R.array.Github)
+            "Github" to intArrayOf(R.mipmap.github)
+        )
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
@@ -52,18 +49,25 @@ class SkillsFrag : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        skill_titles.addAll(resources.getStringArray(R.array.skill_titles))
-        pager.adapter = CoursePagerAdapter(childFragmentManager, context!!)
+        pager.adapter = PagerAdapter(
+            childFragmentManager,
+            resources.getStringArray(R.array.skill_titles)
+        )
         pager.currentItem = 0
         tabLayout.setupWithViewPager(pager)
     }
 
-    override fun onCreateAnimation(transit: Int, enter: Boolean, nextAnim: Int): Animation {
-        return AnimationUtils.loadAnimation(activity, if (enter) android.R.anim.fade_in else android.R.anim.fade_out)
+    override fun onCreateAnimation(
+        transit: Int,
+        enter: Boolean,
+        nextAnim: Int
+    ): Animation {
+        return AnimationUtils.loadAnimation(activity,
+            if (enter) android.R.anim.fade_in else android.R.anim.fade_out)
     }
 
-    inner class CoursePagerAdapter(fm: FragmentManager, var context: Context) : FragmentPagerAdapter(fm) {
-
+    inner class PagerAdapter(fm: FragmentManager, val skill_titles: Array<String>
+    ): FragmentPagerAdapter(fm) {
         override fun getItem(i: Int): Fragment {
             return Skill.newInstance(skill_titles[i])
         }
@@ -97,11 +101,15 @@ class SkillsFrag : Fragment() {
             inflater: LayoutInflater, container: ViewGroup?,
             savedInstanceState: Bundle?
         ): View? {
-            Log.d(LOG_TAG, SKILL)
+            val skill = arguments!!.getString(SKILL) as String
+            Log.d(LOG_TAG, skill)
             val view = inflater.inflate(R.layout.skills_list, container, false)
             val list = view.findViewById<ListView>(R.id.skills_list)
-            list.adapter = SkillAdapter(text[arguments!![SKILL]], images[arguments!![SKILL]],
-                inflater)
+            list.adapter = SkillAdapter(
+                context!!.resources.getStringArray(text[skill] as Int),
+                images[skill],
+                inflater
+            )
             return view
         }
     }

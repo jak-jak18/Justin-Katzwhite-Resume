@@ -5,6 +5,7 @@
     <ListView
             android:id="@+id/tastebudz_listview"
             android:layout_width="match_parent" android:layout_height="match_parent"
-            android:requiresFadingEdge="vertical"/>
+            android:requiresFadingEdge="vertical"
+            android:divider="@android:color/transparent"/>
 </LinearLayout>
 
