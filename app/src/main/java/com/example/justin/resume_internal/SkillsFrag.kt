@@ -1,6 +1,5 @@
 package com.example.justin.resume_internal
 
-import android.content.Context
 import android.graphics.Typeface
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -16,6 +15,7 @@ import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.ListView
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.skills_layout.*
 
 class SkillsFrag : Fragment() {
@@ -40,10 +40,19 @@ class SkillsFrag : Fragment() {
             "OS" to intArrayOf(R.mipmap.windows, R.mipmap.mint),
             "Github" to intArrayOf(R.mipmap.github)
         )
+        val icons = arrayOf(
+            R.mipmap.android3,
+            R.mipmap.cloud,
+            R.mipmap.firebase4,
+            R.mipmap.intellij,
+            R.mipmap.mint2,
+            R.mipmap.github
+        )
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
+    ): View? {
         return inflater.inflate(R.layout.skills_layout, container, false)
     }
 
@@ -55,18 +64,26 @@ class SkillsFrag : Fragment() {
         )
         pager.currentItem = 0
         tabLayout.setupWithViewPager(pager)
+
+        val titles : ArrayList<String> =  ArrayList()
+        titles.addAll(text.keys)
+        for (i in 0..tabLayout.tabCount-1){
+            val customV = LayoutInflater.from(context).inflate(R.layout.title_layout, container)
+            customV.findViewById<ImageView>(R.id.icon).setImageResource(icons[i])
+            customV.findViewById<TextView>(R.id.title).text = titles[i]
+            tabLayout.getTabAt(i)!!.customView = customV
+        }
     }
 
     override fun onCreateAnimation(
-        transit: Int,
-        enter: Boolean,
-        nextAnim: Int
+        transit: Int, enter: Boolean, nextAnim: Int
     ): Animation {
         return AnimationUtils.loadAnimation(activity,
             if (enter) android.R.anim.fade_in else android.R.anim.fade_out)
     }
 
-    inner class PagerAdapter(fm: FragmentManager, val skill_titles: Array<String>
+    inner class PagerAdapter(
+        fm: FragmentManager, val skill_titles: Array<String>
     ): FragmentPagerAdapter(fm) {
         override fun getItem(i: Int): Fragment {
             return Skill.newInstance(skill_titles[i])
@@ -74,10 +91,6 @@ class SkillsFrag : Fragment() {
 
         override fun getCount(): Int {
             return skill_titles.size
-        }
-
-        override fun getPageTitle(position: Int): CharSequence? {
-            return skill_titles[position]
         }
     }
 
@@ -98,8 +111,7 @@ class SkillsFrag : Fragment() {
         }
 
         override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+            inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
         ): View? {
             val skill = arguments!!.getString(SKILL) as String
             Log.d(LOG_TAG, skill)
@@ -114,8 +126,9 @@ class SkillsFrag : Fragment() {
         }
     }
 
-    class SkillAdapter(val text: Array<String>?, val images: IntArray?,
-                       val inflater: LayoutInflater) : BaseAdapter(){
+    class SkillAdapter(
+        val text: Array<String>?, val images: IntArray?, val inflater: LayoutInflater
+    ) : BaseAdapter(){
         val LOG_TAG = this.javaClass.simpleName
 
         override fun getCount(): Int { return text!!.size }

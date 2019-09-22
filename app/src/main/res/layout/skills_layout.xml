@@ -8,8 +8,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" app:tabMode="scrollable"
-            app:tabTextColor="@color/text_color_primary" app:tabSelectedTextColor="@color/grayish_blue_light"/>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tabMode="scrollable" />
 
     <android.support.v4.view.ViewPager
             android:id="@+id/pager"
