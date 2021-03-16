@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.concurrent.TimeUnit
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                     .commit()
                 return@OnNavigationItemSelectedListener true
             }
-            R.id.contact ->{
+            R.id.contact -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.frag_container, ContactFrag.newInstance())
                     .commit()
@@ -42,6 +43,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setTheme(R.style.AppTheme)
+        try {
+            TimeUnit.SECONDS.sleep(1)
+        }catch (e: InterruptedException){
+
+        }
         setContentView(R.layout.activity_main)
         bottomNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 

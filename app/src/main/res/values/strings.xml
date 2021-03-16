@@ -169,7 +169,7 @@
     </string>
     <string name="tastebudz_course">
         When a customer scans a tag with a phone running Tastebudz, the phone will immediately download the
-        restaurant’s menu, if it isn’t stored already, and allow the customer to order whatever is available.
+        restaurant’s menu and allow the customer to order whatever is available.
     </string>
     <string name="tastebudz_item">
         Besides being a vastly more cost efficient solution, Tastebudz allows restaurants to customize their menu with
