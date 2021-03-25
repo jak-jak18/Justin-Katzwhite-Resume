@@ -192,4 +192,19 @@
         address provided below. I should respond within 48 hours. Thank you.
         \n\nE-mail: jkatzwhitew@gmail.com
     </string>
+    <string name="chooser_title">
+        Thank you!
+    </string>
+    <string name="first_attempt_title">
+        Review Me?
+    </string>
+    <string name="first_attempt">
+        Thank you for reviewing my resumé. Would you mind leaving a review on the Google Play Store?
+    </string>
+    <string name="second_attempt_title">
+        Ya Sure?
+    </string>
+    <string name="second_attmpt">
+        O please, o please! It will only take a minute.
+    </string>
 </resources>

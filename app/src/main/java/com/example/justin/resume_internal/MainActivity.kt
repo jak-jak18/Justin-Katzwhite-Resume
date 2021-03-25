@@ -1,5 +1,6 @@
 package com.example.justin.resume_internal
 
+import android.content.Context
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
@@ -48,6 +49,7 @@ class MainActivity : AppCompatActivity() {
         }catch (e: InterruptedException){
 
         }
+        getPreferences(Context.MODE_PRIVATE)
         setContentView(R.layout.activity_main)
         bottomNav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
 
@@ -55,4 +57,6 @@ class MainActivity : AppCompatActivity() {
             .replace(R.id.frag_container, BackgroundFrag.newInstance())
             .commit()
     }
+
+
 }
