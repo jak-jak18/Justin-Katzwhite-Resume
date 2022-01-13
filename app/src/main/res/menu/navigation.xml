@@ -12,13 +12,19 @@
                 android:icon="@drawable/code"
                 android:title="@string/skills" />
         <item
-                android:id="@+id/tastebudz"
+                android:id="@+id/github"
                 android:orderInCategory="2"
+                android:icon="@drawable/code"
+                android:title="@string/github" />
+
+        <item
+                android:id="@+id/tastebudz"
+                android:orderInCategory="3"
                 android:icon="@drawable/restaurant"
                 android:title="@string/tastebudz" />
         <item
                 android:id="@+id/contact"
-                android:orderInCategory="3"
+                android:orderInCategory="4"
                 android:icon="@drawable/mail_outline"
                 android:title="@string/C" />
     </group>

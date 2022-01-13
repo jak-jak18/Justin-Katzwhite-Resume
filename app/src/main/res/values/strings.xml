@@ -6,12 +6,17 @@
 
     <string name="home">Home</string>
     <string name="BI">Background Information</string>
+
+    <string name="PL">Programming Languages</string>
+    <string name="S">SQL</string>
+
+
+    <!--Bottome Nav Title-->
     <string name="background">Background</string>
     <string name="skills">Skills</string>
-    <string name="PL">Programming Languages</string>
-    <string name="C">Contact</string>
-    <string name="S">SQL</string>
+    <string name="github">Github</string>
     <string name="tastebudz">Tastebudz</string>
+    <string name="C">Contact</string>
 
 
     <!--Background Text-->
@@ -184,6 +189,21 @@
         tandem so that orders can be placed from a customer’s phones, sent to the kitchen and waiters can serve as
         soon as the food is available.
     </string>
+
+
+    <!--Company Titles-->
+    <string-array name="company_titles">
+        <item>Rittenhouse Book Distributors</item>
+        <item>Micro Center</item>
+        <item>Verizon Wireless</item>
+        <item>Blackdog Interactive</item>
+        <item>Red Wing Shoes</item>
+        <item>USPTO</item>
+    </string-array>
+
+
+    <!--Company Text-->
+
 
 
     <!--Contact Text-->
